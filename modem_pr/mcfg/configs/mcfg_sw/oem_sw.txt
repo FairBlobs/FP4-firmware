@@ -71,6 +71,7 @@ mcfg_sw/generic/EU/Vodafone/VoLTE/SAfrica/mcfg_sw.mbn
 mcfg_sw/generic/EU/Vodafone/VoLTE/Spain/mcfg_sw.mbn
 mcfg_sw/generic/EU/Vodafone/VoLTE/Turkey/mcfg_sw.mbn
 mcfg_sw/generic/EU/Vodafone/VoLTE/UK/mcfg_sw.mbn
+mcfg_sw/generic/EU/Vodafone/VoLTE/Ger_Ts/mcfg_sw.mbn
 mcfg_sw/generic/Korea/KT/Commercial_KT_LTE/mcfg_sw.mbn
 mcfg_sw/generic/Korea/LGU/Commercial/mcfg_sw.mbn
 mcfg_sw/generic/Korea/SKT/Commercial/mcfg_sw.mbn

@@ -22,7 +22,7 @@ cleanup() {
 }
 trap cleanup EXIT
 
-unzip -d "$tmpdir" "$1" images/NON-HLOS.bin images/super.img
+unzip -d "$tmpdir" "$1" images/BTFM.bin images/NON-HLOS.bin images/super.img
 
 ### NON-HLOS.bin ###
 sudo mount -o ro "$tmpdir"/images/NON-HLOS.bin "$mount"
@@ -31,6 +31,12 @@ cp "$mount"/image/cdsp* .
 cp -r "$mount"/image/modem* .
 cp "$mount"/image/venus* .
 cp "$mount"/image/wlanmdsp.mbn .
+sudo umount "$mount"
+
+### BTFM.bin ###
+sudo mount -o ro "$tmpdir"/images/BTFM.bin "$mount"
+cp "$mount"/image/apbtfw11.tlv .
+cp "$mount"/image/apnv11.bin .
 sudo umount "$mount"
 
 ### super.img ###

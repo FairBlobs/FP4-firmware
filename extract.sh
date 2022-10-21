@@ -52,5 +52,7 @@ cp "$mount"/firmware/a615_zap.mdt .
 cp "$mount"/firmware/a619_gmu.bin .
 cp "$mount"/firmware/a630_sqe.fw .
 cp "$mount"/firmware/lagoon_ipa_fws.* .
+cp "$mount"/firmware/aw882xx_monitor.bin .
+cp "$mount"/firmware/aw882xx_spk_reg_*.bin .
 
 # cleanup happens on exit with the signal handler at the top

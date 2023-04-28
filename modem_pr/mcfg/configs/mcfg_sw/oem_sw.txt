@@ -27,11 +27,13 @@ mcfg_sw/generic/EU/DT/Commercial/Slovakia/mcfg_sw.mbn
 mcfg_sw/generic/EU/DT/VoLTE/Commercial/mcfg_sw.mbn
 mcfg_sw/generic/EU/EE/Commercial/mcfg_sw.mbn
 mcfg_sw/generic/EU/Elisa/Commercial/FI/mcfg_sw.mbn
+mcfg_sw/generic/EU/Free_tct/Commercial/mcfg_sw.mbn
 mcfg_sw/generic/EU/H3G/Commercial/Austria/mcfg_sw.mbn
 mcfg_sw/generic/EU/H3G/Commercial/Denmark/mcfg_sw.mbn
 mcfg_sw/generic/EU/H3G/Commercial/Italy/mcfg_sw.mbn
 mcfg_sw/generic/EU/H3G/Commercial/SE/mcfg_sw.mbn
 mcfg_sw/generic/EU/H3G/Commercial/UK/mcfg_sw.mbn
+mcfg_sw/generic/EU/Iliad_tct/Commercial/Italy/mcfg_sw.mbn
 mcfg_sw/generic/EU/KPN/VoLTE/Netherlands/mcfg_sw.mbn
 mcfg_sw/generic/EU/Orange/Commercial/Belgium/mcfg_sw.mbn
 mcfg_sw/generic/EU/Orange/Commercial/France/mcfg_sw.mbn
@@ -86,6 +88,7 @@ mcfg_sw/generic/NA/ATT/VoLTE/mcfg_sw.mbn
 mcfg_sw/generic/NA/ATT/5G/mcfg_sw.mbn
 mcfg_sw/generic/NA/Bell/Commercial/CA/mcfg_sw.mbn
 mcfg_sw/generic/NA/CBRS/Commercial/US/mcfg_sw.mbn
+mcfg_sw/generic/NA/Dish/Commercial/US/mcfg_sw.mbn
 mcfg_sw/generic/NA/Rogers/Commercial/CA/mcfg_sw.mbn
 mcfg_sw/generic/NA/Sprint/VoWiFi/mcfg_sw.mbn
 mcfg_sw/generic/NA/Sprint/VoWiFi_A/mcfg_sw.mbn
@@ -104,6 +107,7 @@ mcfg_sw/generic/SEA/APT/Commercial/mcfg_sw.mbn
 mcfg_sw/generic/SEA/ChunghwaTel/Commercial/TW/mcfg_sw.mbn
 mcfg_sw/generic/SEA/DTAC/Commercial/VoLTE/mcfg_sw.mbn
 mcfg_sw/generic/SEA/FarEastOne/Commercial/mcfg_sw.mbn
+mcfg_sw/generic/SEA/FarEastOne/VoLTE/TW_Ts/mcfg_sw.mbn
 mcfg_sw/generic/SEA/Globe/Commercial/PH/mcfg_sw.mbn
 mcfg_sw/generic/SEA/HKT/Commercial/HK/mcfg_sw.mbn
 mcfg_sw/generic/SEA/M1/Commercial/SG/mcfg_sw.mbn

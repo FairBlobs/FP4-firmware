@@ -22,7 +22,9 @@ cleanup() {
 }
 trap cleanup EXIT
 
-unzip -d "$tmpdir" "$1" images/BTFM.bin images/NON-HLOS.bin images/super.img
+unzip -d "$tmpdir" "$1" images/BTFM.bin images/dspso.bin images/NON-HLOS.bin images/super.img
+
+mkdir hexagonfs hexagonfs/dsp hexagonfs/sensors
 
 ### NON-HLOS.bin ###
 sudo mount -o ro "$tmpdir"/images/NON-HLOS.bin "$mount"
@@ -37,6 +39,11 @@ sudo umount "$mount"
 sudo mount -o ro "$tmpdir"/images/BTFM.bin "$mount"
 cp "$mount"/image/apbtfw11.tlv .
 cp "$mount"/image/apnv11.bin .
+sudo umount "$mount"
+
+### dspso.bin ###
+sudo mount -o ro "$tmpdir"/images/dspso.bin "$mount"
+cp -r "$mount"/*dsp hexagonfs/dsp/
 sudo umount "$mount"
 
 ### super.img ###
@@ -54,5 +61,12 @@ cp "$mount"/firmware/a630_sqe.fw .
 cp "$mount"/firmware/lagoon_ipa_fws.* .
 cp "$mount"/firmware/aw882xx_monitor.bin .
 cp "$mount"/firmware/aw882xx_spk_reg_*.bin .
+cp -r "$mount"/etc/acdbdata hexagonfs/acdb
+cp -r "$mount"/etc/sensors/config hexagonfs/sensors/config
+cp -r "$mount"/etc/sensors/sns_reg_config hexagonfs/sensors/sns_reg.conf
+
+# Sensor registry for hexagonfs is extracted from persist partition which is
+# not shipped with the factory image.
+# cp -r /mnt/persist/sensors/registry/registry hexagonfs/sensors/registry
 
 # cleanup happens on exit with the signal handler at the top

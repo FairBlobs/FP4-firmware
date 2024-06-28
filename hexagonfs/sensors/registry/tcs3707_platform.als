@@ -1,0 +1,1 @@
+{"tcs3707_platform.als":{"owner":"sns_tcs3707","fac_cal":{"type":"grp","ver":"0","data":""}}}

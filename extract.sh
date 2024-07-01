@@ -69,4 +69,7 @@ cp -r "$mount"/etc/sensors/sns_reg_config hexagonfs/sensors/sns_reg.conf
 # not shipped with the factory image.
 # cp -r /mnt/persist/sensors/registry/registry hexagonfs/sensors/registry
 
+# Socinfo files are extracted from the running device with stock Android.
+# for i in hw_platform platform_subtype platform_subtype_id platform_version revision soc_id; do adb shell cat /sys/devices/soc0/$i > hexagonfs/socinfo/$i; done
+
 # cleanup happens on exit with the signal handler at the top

@@ -28,10 +28,11 @@ mkdir hexagonfs hexagonfs/dsp hexagonfs/sensors
 
 ### NON-HLOS.bin ###
 sudo mount -o ro "$tmpdir"/images/NON-HLOS.bin "$mount"
-cp "$mount"/image/adsp* .
-cp "$mount"/image/cdsp* .
-cp -r "$mount"/image/modem* .
-cp "$mount"/image/venus* .
+cp "$mount"/image/adsp.{b*,mdt} .
+cp "$mount"/image/cdsp.{b*,mdt} .
+cp "$mount"/image/modem.{b*,mdt} .
+cp -r "$mount"/image/modem_pr .
+cp "$mount"/image/venus.{b*,mdt} .
 cp "$mount"/image/wlanmdsp.mbn .
 sudo umount "$mount"
 
@@ -54,11 +55,10 @@ loopdev=$(sudo losetup --read-only --find --show "$tmpdir"/super.raw.img)
 sudo dmsetup create --concise "$(sudo parse-android-dynparts "$loopdev")"
 
 sudo mount -o ro /dev/mapper/dynpart-vendor_a "$mount"
-cp "$mount"/firmware/a615_zap.b* .
-cp "$mount"/firmware/a615_zap.mdt .
+cp "$mount"/firmware/a615_zap.{b*,mdt} .
 cp "$mount"/firmware/a619_gmu.bin .
 cp "$mount"/firmware/a630_sqe.fw .
-cp "$mount"/firmware/lagoon_ipa_fws.* .
+cp "$mount"/firmware/lagoon_ipa_fws.{b*,mdt} .
 cp "$mount"/firmware/aw882xx_monitor.bin .
 cp "$mount"/firmware/aw882xx_spk_reg_*.bin .
 cp -r "$mount"/etc/acdbdata hexagonfs/acdb
